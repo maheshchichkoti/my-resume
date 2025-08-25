@@ -9,10 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
+
+      - name: Rename PDF
+        run: mv resume.pdf CV_Mahesh_Chitakoti_2025.pdf
+
       - name: Upload PDF to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
