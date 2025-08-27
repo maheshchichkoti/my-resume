@@ -20,6 +20,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{xifthen}
 \input{glyphtounicode}
 
 
@@ -86,11 +87,13 @@
 }
 
 \newcommand{\resumeProjectHeading}[3]{
-    \item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small \textbf{} #3} & \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2}
+  \end{tabular*}%
+  \ifthenelse{\isempty{#3}}{}{\```math
+-0.25em]\textit{\small #3}}%
+  \vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -122,15 +125,14 @@
 \end{center}
 
 %-----------TECHNICAL SKILLS-----------
-%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
   \item{
-    \textbf{Frontend:} React.js, Next.js, TypeScript, Redux Toolkit, Context API, Tailwind CSS, Responsive Design \\
+    \textbf{Frontend:} React.js, Next.js, TypeScript, Redux Toolkit, Context API, Tailwind CSS \\
     \textbf{Backend:} Node.js, Express.js, REST/GraphQL APIs, WebSockets, Microservices, Event-Driven Architecture \\
-    \textbf{Database:} MongoDB, PostgreSQL, Redis, Mongoose ODM, Sequelize ORM, Database Optimization\\
+    \textbf{Database:} MongoDB, PostgreSQL, Redis, Mongoose ODM, Sequelize ORM, Database Optimization \\
     \textbf{Cloud/DevOps:} AWS, GCP, Azure, Docker, Kubernetes, CI/CD (GitHub Actions), Serverless \\
-    \textbf{AI/ML:} Generative AI (OpenAI API, LangChain), Retrieval-Augmented Generation (RAG), Prompt Engineering, Vector Databases, LLM Integration, Model Fine-Tuning \\
+    \textbf{AI/ML:} Generative AI (OpenAI API, LangChain), RAG, Prompt Engineering, LLM Integration & Fine-Tuning \\
     \textbf{Tools:} Git, Jest, Agile/Scrum, JIRA
   }
 \end{itemize}
@@ -139,27 +141,26 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-    \resumeSubheading
-        {Full Stack Developer (Contract) -- PearlThoughts}{Feb 2024 -- Present}
-        {Remote}{}
-        \resumeItemListStart
-            \resumeItem{Boosted operational efficiency by 35\% by architecting an enterprise workflow automation system on GCP Cloud Functions, reliably executing 1,000+ daily workflows with \textbf{99.9\% uptime}.}
-            \resumeItem{Slashed manual bid processing by 70\% with an intelligent routing engine, enabling rapid assignment of 500+ monthly projects and cutting delays.}
-            \resumeItem{Reduced administrative costs by 60\% with a compliant, fully automated financial documentation pipeline that passed all audits error‑free.}
-            \resumeItem{Collaborated with cross‑functional teams to align backend automation with finance and operations, ensuring seamless adoption and measurable ROI.}
-        \resumeItemListEnd
+\resumeSubheading
+    {Full Stack Developer (Contract) -- PearlThoughts}{Feb 2024 -- Present}
+    {Remote}{}
+    \resumeItemListStart
+        \resumeItem{Boosted operational efficiency by 35\% by architecting a bid management automation system integrating \textbf{Google Workspace APIs and NestJS}, executing 1,000+ daily workflows with \textbf{99.9\% uptime}.}
+        \resumeItem{Cut manual bid processing 70\% with an intelligent routing engine that auto‑assigned estimators, enabling rapid turnaround of 500+ monthly projects.}
+        \resumeItem{Automated financial operations (receipts, POs, compliance) — reducing admin costs 60\% while passing audits error‑free.}
+        \resumeItem{Partnered with estimators, finance, and ops to align automation with workflows, ensuring seamless adoption and measurable ROI.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-        {Full Stack Developer -- The DevOps Team}{Oct 2023 -- Jan 2024}
-        {Bangalore, India}{}
-        \resumeItemListStart
-            \resumeItem{Scaled a zero‑user MVP into 5,000 active users in under 3 months, achieving \textbf{85\% AI‑driven match accuracy} via custom ML algorithms, while optimizing Node.js APIs to cut response times from 800ms to 320ms — sustaining \textbf{50,000+ daily requests}.}
-            \resumeItem{Increased onboarding completions by 44\% through targeted UX refinements and A/B testing, improving user acquisition.}
-            \resumeItem{Delivered real‑time analytics pipelines processing \textbf{1M+ daily events}, generating insights that improved retention by 25\%.}
-            \resumeItem{Implemented a fully automated CI/CD pipeline, enabling \textbf{10+ zero‑downtime releases per week}.}
-            \resumeItem{Partnered with designers, data scientists, and DevOps to ensure architecture decisions advanced both UX and ML goals.}
-        \resumeItemListEnd
-
+\resumeSubheading
+    {Full Stack Developer -- The DevOps Team}{Oct 2023 -- Jan 2024}
+    {Bangalore, India}{}
+    \resumeItemListStart
+        \resumeItem{Scaled MVP to \textbf{5,000 active users in 3 months}, achieving \textbf{85\% ML‑driven match accuracy} and optimising Node.js APIs \textbf{800ms→320ms} to sustain \textbf{50K+ daily requests}.}
+        \resumeItem{Boosted onboarding completions 44\% with progressive UX refinements and A/B tests, directly raising new‑user conversions.}
+        \resumeItem{Designed real‑time analytics pipelines for \textbf{1M+ events/day}, generating insights that lifted retention 25\%.}
+        \resumeItem{Implemented fully automated CI/CD pipeline, enabling \textbf{10+ zero‑downtime releases per week}.}
+        \resumeItem{Collaborated with design, data science, and DevOps teams to align architecture with both UX and ML goals.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
@@ -170,23 +171,20 @@
         {News RAG Chatbot -- AI-Powered News Query System}{Apr 2024 -- Present}
         {}
         \resumeItemListStart
-            \resumeItem{Built a Retrieval-Augmented Generation (RAG) chatbot integrating LLMs (Gemini API) with Qdrant vector database for semantic search and context-rich answers.}
-            \resumeItem{Designed custom prompt-engineering workflows to improve factual accuracy, relevance, and tone in generated responses.}
-            \resumeItem{Developed a FastAPI ML backend for embedding generation, vector storage, and RAG pipeline orchestration.}
-            \resumeItem{Implemented a Node.js/Express proxy service with Redis caching for session/history management, enabling scalable multi-user chat.}
-            \resumeItem{Optimized latency and query throughput via asynchronous processing and minimal context windows; architected a modular pipeline ready for LangChain-style orchestration and potential LLM fine-tuning.}
+            \resumeItem{Built a RAG chatbot with \textbf{Gemini API + Qdrant} for semantic search and context‑aware answers, supported by a FastAPI backend for embeddings/vector storage.}
+            \resumeItem{Integrated custom prompt workflows improving factual accuracy, tone, and relevance while enabling scalable multi‑user sessions through Node.js/Redis.}
+            \resumeItem{Optimised latency with async processing and lean context windows; designed a modular pipeline ready for LangChain‑style orchestration and model fine‑tuning.}
         \resumeItemListEnd
 
     \resumeProjectHeading
         {Tradiofy -- Low-Latency Crypto Trading Platform $|$ \emph{\href{https://tradiofy.netlify.app/}{Live Demo}}}{Jun 2024 -- Present}
         {}
         \resumeItemListStart
-            \resumeItem{Engineered an event‑driven trading engine processing \textbf{1,000+ trades/minute} with 99.9\% uptime even during peak volatility.}
-            \resumeItem{Reduced trade execution latency by 70\% via WebSocket optimization and Azure Functions integration.}
-            \resumeItem{Integrated ML‑based fraud detection, cutting false positives by 25\% while sustaining 99.8\% detection accuracy.}
+            \resumeItem{Engineered event‑driven trading engine handling \textbf{1,000+ trades/min} at \textbf{99.9\% uptime}, even during peak volatility.}
+            \resumeItem{Cut trade latency by 70\% via WebSocket optimisation and Azure Functions integration.}
+            \resumeItem{Deployed ML‑based fraud detection, reducing false positives 25\% while maintaining \textbf{99.8\% detection accuracy}.}
         \resumeItemListEnd
 
-    % Optional: Additional Project line to still mention WorkBridge
     \resumeItem{\textit{Additional Project:} \href{https://www.workbridgeco.com}{WorkBridge -- AI-Powered Team Collaboration Platform}}
     
 \resumeSubHeadingListEnd
