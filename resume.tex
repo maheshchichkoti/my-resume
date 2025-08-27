@@ -91,10 +91,10 @@
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & \textit{\small #2}
   \end{tabular*}%
-  \ifthenelse{\isempty{#3}}{}{\```math
--0.25em]\textit{\small #3}}%
+  \ifthenelse{\isempty{#3}}{}{\hspace{-0.25em}\textit{\small #3}}%
   \vspace{-7pt}
 }
+
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
@@ -169,11 +169,11 @@
 
  \resumeProjectHeading
   {News RAG Chatbot -- AI-Powered News Query System}{Apr 2024 -- Present}
-  {Python, FastAPI, Gemini API, Qdrant, Node.js, Redis, LangChain}
+  {Python, FastAPI, Gemini API, Qdrant, Node.js, Redis}
         \resumeItemListStart
             \resumeItem{Built a RAG chatbot using \textbf{Gemini API + Qdrant} with FastAPI backend, delivering context‑aware answers at ~90\% accuracy.}
             \resumeItem{Engineered custom prompt workflows that improved response relevance by \textbf{~40\%} while maintaining factual accuracy across 10K+ queries.}
-            \resumeItem{Achieved sub‑300ms response times with async pipelines and context optimization, scaling to 100+ concurrent users.}
+            \resumeItem{Achieved \textbf{<300ms latency} with async pipelines and context optimization, scaling to 100+ users.}
         \resumeItemListEnd
 
     \resumeProjectHeading
@@ -187,6 +187,7 @@
 
     \resumeItem{\textit{Additional:} \href{https://www.workbridgeco.com}{WorkBridge -- AI-Powered Team Collaboration Platform}}
 \resumeSubHeadingListEnd
+
 %-----------CERTIFICATIONS-----------
 \section{Certifications}
 \begin{itemize}[leftmargin=0.15in, label={}, itemsep=-0.05in]
