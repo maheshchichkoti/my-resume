@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{lmodern}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xifthen}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2}
+  \end{tabular*}%
+  \ifthenelse{\isempty{#3}}{}{\hspace{-0.25em}\textit{\small #3}}%
+  \vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+\begin{center}
+    \textbf{\Huge \scshape Mahesh Chitakoti} \\ \vspace{1pt}
+    \small \faPhone\, \href{tel:+919481777227}{948-177-7227} $|$ 
+    \faEnvelope\, \href{mailto:maheshchitkoti@gmail.com}{maheshchitkoti@gmail.com} $|$ 
+    \faLinkedin\, \href{https://linkedin.com/in/maheshchitakoti}{LinkedIn} $|$ 
+    \faGithub\, \href{https://github.com/maheshchichkoti}{Github}
+\end{center}
+
+% %-----------PROFESSIONAL SUMMARY-----------
+% \section{Professional Summary}
+% \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
+%   \item{
+%     Full-stack developer with \textbf{2+ years} of experience building scalable, AI-powered cloud solutions. Skilled in the \textbf{MERN stack, microservices, and Generative AI integration (RAG, LLMs, prompt engineering)}. Delivered measurable impact by cutting API latency by \textbf{60\%}, scaling apps to \textbf{5K+ users}, and automating core business workflows. Focused on designing production-ready systems that merge modern engineering practices with AI-driven intelligence.
+%   }
+% \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
+  \item{
+    \textbf{Frontend:} React.js, Next.js, TypeScript, Redux Toolkit, Context API, Tailwind CSS \\
+    \textbf{Backend:} Node.js, Express.js, REST/GraphQL APIs, WebSockets, Microservices, Event-Driven Architecture \\
+    \textbf{Database:} MongoDB, PostgreSQL, Redis, Mongoose ODM, Sequelize ORM, Database Optimization \\
+    \textbf{Cloud/DevOps:} AWS, GCP, Azure, Docker, Kubernetes, CI/CD (GitHub Actions), Serverless \\
+    \textbf{AI/ML:} Generative AI (OpenAI API, LangChain), RAG, Prompt Engineering, LLM Fine-Tuning \\
+    \textbf{Tools:} Git, Jest, Agile/Scrum, JIRA
+  }
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Full Stack Developer (Contract) -- PearlThoughts}{Feb 2025 -- Aug 2025}
+    {Remote}{}
+    \resumeItemListStart
+        \resumeItem{Boosted efficiency by \textbf{~35\%} by architecting a NestJS + Google Workspace automation system, executing 1K+ workflows/day with \textbf{99.9\% uptime}.}
+        \resumeItem{Slashed manual bid processing by \textbf{~70\%} via an intelligent routing engine, accelerating allocation of 500+ projects per month.}
+        \resumeItem{Automated financial operations (receipts, POs, compliance), cutting admin costs by \textbf{~60\%} while passing audits error‑free.}
+        \resumeItem{Partnered with estimators, finance, and ops to align automation with workflows, ensuring smooth adoption and measurable ROI.}
+    \resumeItemListEnd
+
+\resumeSubheading
+    {Full Stack Developer -- The DevOps Team}{Oct 2023 -- Jan 2025}
+    {Bangalore, India}{}
+    \resumeItemListStart
+        \resumeItem{Scaled MVP to \textbf{~5K users in 3 months}, achieving \textbf{~85\% ML‑match accuracy} and optimising Node.js APIs (\textbf{800ms→320ms}) to sustain \textbf{50K+ requests/day}.}
+        \resumeItem{Raised onboarding completions by \textbf{~44\%} through UX refinements and A/B testing, increasing conversion rates.}
+        \resumeItem{Built analytics pipelines for \textbf{1M+ events/day}, generating insights that boosted retention by \textbf{~25\%}.}
+        \resumeItem{Deployed automated CI/CD pipelines enabling \textbf{10+ zero‑downtime releases per week}.}
+        \resumeItem{Collaborated with design, data science, and DevOps teams to align architecture with UX and ML goals.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {WorkBridge -- AI-Powered Project Collaboration Platform $|$ \textit{\underline{\href{https://www.workbridgeco.com}{\small In Development}}}}{Mar 2025 -- Present}
+  {MERN Stack, OpenAI API, RAG, LangChain, Redis, AWS, Docker}
+  \resumeItemListStart
+    \resumeItem{Building an AI-driven platform connecting students with real-world industry projects for skill development and career exposure.}
+    \resumeItem{Engineered production-ready \textbf{Node.js microservices backend} with \textbf{Redis caching} and \textbf{AWS deployment}, maintaining \textbf{99.8\% uptime} in testing environments.}
+    \resumeItem{Implemented \textbf{RAG pipelines using LangChain + GPT-4} for intelligent project matching, achieving \textbf{90\%+ accuracy} in recommendations.}
+    \resumeItem{Developed semantic search engine with \textbf{Pinecone vector embeddings}, reducing query response time by \textbf{~65\%}.}
+  \resumeItemListEnd
+
+\vspace{3pt}
+\resumeItem{
+  \textbf{Additional Projects:} 
+  \textit{\underline{\href{https://tradiofy.netlify.app/}{Tradiofy}}} — Crypto trading platform with ML fraud detection $|$
+  \textit{\underline{\href{https://github.com/maheshchichkoti/news-rag-backend}{News RAG Chatbot}}} — AI news query system (Gemini API, Qdrant)
+}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-0.05in]
+\item Oracle AI Vector Search Certified Professional, by \underline{\textcolor{blue}            {\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=BBBFD68A8A08024E5624BE28AA84D101812885D8B9C036DA18F8F110A75CBB12}{Oracle}}} -- Sep 2025
+\item Oracle Cloud Infrastructure 2024 Generative AI Certified Professional, by 
+    \underline{\textcolor{blue}{\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=2FD55AA64EF5240AFF31F10E95EB6D46DCAC92326D8E2ABB457EE7AC8C3CAF65s}{Oracle}}} -- Aug 2024
+     \item Machine Learning I, by 
+     \underline{\textcolor{blue}{\href{https://badges.plus.columbia.edu/5fdeba5e-ee65-4041-86d9-602fb4d1f288\#acc.Xf1YuPmA}{Columbia University}}} -- Aug 2025
+    \item  Java Full Stack Development Certificate, by Jspiders Bangalore -- Aug 2024
+  \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Adichunchanagiri Institute of Technology}{Chikkamagaluru, KA}
+      {Bachelor of Engineering, VTU University}{Aug. 2023}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
