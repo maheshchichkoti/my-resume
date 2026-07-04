@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 \usepackage{lmodern}
 
 \usepackage{latexsym}
@@ -35,8 +35,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 
@@ -46,8 +46,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -89,7 +89,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=2.5pt, parsep=0pt, topsep=2pt, partopsep=0pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=1pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
@@ -102,30 +102,28 @@
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Mahesh Chitakoti} \\ \vspace{1pt}
-    \small \faPhone\, \href{tel:+919481777227}{948-177-7227} $|$
+    \small \faPhone\, \href{tel:+919481777227}{+91 94817 77227} $|$
     \faEnvelope\, \href{mailto:maheshchitkoti@gmail.com}{maheshchitkoti@gmail.com} $|$
     \faLinkedin\, \href{https://linkedin.com/in/maheshchitakoti}{LinkedIn} $|$
-    \faGithub\, \href{https://github.com/maheshchichkoti}{Github}
+    \faGithub\, \href{https://github.com/maheshchichkoti}{GitHub}
 \end{center}
 
 %-----------SUMMARY-----------
 \section{Summary}
 \begin{itemize}[leftmargin=0.15in, label={}]
-  \item \small{AI Engineer and Full Stack Developer with 2.5+ years of experience building production-grade AI systems and scalable web applications. Specialized in Generative AI, advanced RAG pipelines, agentic workflows, vector search, and distributed backend systems. Proven track record of \textbf{reducing LLM inference costs by 35\%}, improving retrieval latency to \textbf{$<$250ms at 5M+ record scale}, and delivering high-performance AI applications using Python, FastAPI, LangChain, Node.js, and cloud-native infrastructure.}
+  \item \small{AI Engineer and Full Stack Developer with 2.5+ years of experience building production AI systems and scalable web applications. Specialized in RAG pipelines, agentic workflows, and vector search, with a strong backend foundation in Python, FastAPI, Node.js, and cloud-native infrastructure. Recently reduced LLM inference costs by \textbf{35\%} through semantic caching on a production RAG system.}
 \end{itemize}
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
 \item{
-\textbf{Languages:} Python, JavaScript \\
+\textbf{Languages:} Python, JavaScript, TypeScript, SQL \\
+\textbf{AI \& GenAI:} RAG, Agentic Workflows, LangChain, LlamaIndex, OpenAI, Gemini, Vector Search, Prompt Engineering \\
+\textbf{Backend:} Node.js, Express.js, NestJS, FastAPI, REST APIs, GraphQL, WebSockets, Microservices \\
 \textbf{Frontend:} React.js, Next.js, Redux, Tailwind CSS \\
-\textbf{Backend:} Node.js, Express.js, NestJS, FastAPI, GraphQL, REST APIs, Microservices \\
-\textbf{AI \& GenAI:} RAG, Agentic Workflows, LangChain, LlamaIndex, OpenAI, Gemini, Prompt Engineering, Vector Search \\
-\textbf{Databases:} PostgreSQL, MongoDB, Redis, Qdrant, Pinecone, pgvector \\
-\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, GitHub Actions, CI/CD, Nginx \\
-\textbf{Messaging:} WebSockets, MQTT, Redis Pub/Sub \\
-\textbf{Tools:} Git, GitHub, Jira, Agile/Scrum
+\textbf{Databases:} PostgreSQL, MongoDB, Redis, Qdrant, pgvector \\
+\textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, GitHub Actions, CI/CD
 }
 \end{itemize}
 
@@ -137,19 +135,19 @@
     {AI Developer -- SAHIONEXT Technology Pvt. Ltd.}{Oct 2025 -- Apr 2026}
     {Remote}{}
     \resumeItemListStart
-        \resumeItem{Architected and deployed production-grade \textbf{RAG pipelines} using \textbf{FastAPI, LangChain, Gemini APIs, and Redis semantic caching}, reducing LLM inference costs by \textbf{35\%} while improving response quality.}
-        \resumeItem{Developed AI microservices for transcript processing and semantic search, handling \textbf{5M+ indexed records} with \textbf{$<$250ms} query latency using \textbf{Qdrant}.}
-        \resumeItem{Designed real-time streaming pipelines using \textbf{WebSockets and MQTT} with retry/fallback mechanisms, improving system reliability from \textbf{78\% to 96\%}.}
-        \resumeItem{Developed \textbf{React.js + Redux dashboards} for AI analytics and production monitoring, improving observability and reducing incident response time.}
+        \resumeItem{Architected and deployed production \textbf{RAG pipelines} using \textbf{FastAPI, LangChain, Gemini APIs, and Redis semantic caching}, reducing LLM inference costs by \textbf{35\%}.}
+        \resumeItem{Developed AI microservices for transcript processing and semantic search over millions of indexed records using \textbf{Qdrant}, tuning embeddings and filters to keep query latency low at scale.}
+        \resumeItem{Designed real-time streaming pipelines using \textbf{WebSockets and MQTT} with retry and fallback handling, significantly reducing dropped-message incidents in production.}
+        \resumeItem{Built \textbf{React.js + Redux} dashboards for AI analytics and production monitoring, improving observability and speeding up incident triage.}
     \resumeItemListEnd
 
 \resumeSubheading
-    {Full Stack Developer, Contract -- PearlThoughts (Client: Coursera)}{Feb 2025 -- Sep 2025}
+    {Full Stack Developer (Contract) -- PearlThoughts}{Feb 2025 -- Sep 2025}
     {Remote}{}
     \resumeItemListStart
-        \resumeItem{Engineered backend automation systems using \textbf{NestJS, Node.js, and Google Workspace APIs}, executing \textbf{1K+ workflows/day} with \textbf{99.9\% uptime}.}
-        \resumeItem{Developed scalable APIs and microservices using \textbf{PostgreSQL} and \textbf{MongoDB}, reducing manual processing effort by \textbf{70\%}.}
-        \resumeItem{Containerized services using \textbf{Docker} and deployed on \textbf{AWS}, enabling reliable CI/CD pipelines and zero-downtime releases.}
+        \resumeItem{Engineered backend automation systems using \textbf{NestJS, TypeScript, and Google Workspace APIs}, executing \textbf{1K+ workflows/day} across multiple client engagements.}
+        \resumeItem{Developed APIs and microservices backed by \textbf{PostgreSQL} and \textbf{MongoDB}, replacing manual processing steps with automated workflows.}
+        \resumeItem{Containerized services with \textbf{Docker} and deployed on \textbf{AWS} with CI/CD pipelines for reliable, repeatable releases.}
         \resumeItem{Performed QA validation for Coursera course launches, auditing coding labs and grading systems to ensure stable student environments.}
     \resumeItemListEnd
 
@@ -157,11 +155,11 @@
     {Full Stack Developer -- The DevOps Team}{Oct 2023 -- Jan 2025}
     {Bangalore, India}{}
     \resumeItemListStart
-       \resumeItem{Optimized \textbf{Node.js + Express.js} APIs from \textbf{800ms to 320ms} using \textbf{Redis caching}, improving performance for high-frequency platform operations.}
+       \resumeItem{Optimized \textbf{Node.js + Express.js} APIs, cutting median response time from \textbf{800ms to 320ms} with \textbf{Redis caching} for high-frequency platform operations.}
        \resumeItem{Developed recommendation workflows for a job portal to improve candidate-job matching based on skills, preferences, and role requirements.}
-        \resumeItem{Improved user onboarding by \textbf{44\%} through A/B-tested \textbf{React.js and Next.js} workflows.}
-        \resumeItem{Developed analytics pipelines processing \textbf{1M+ events/day}, improving user retention by \textbf{25\%}.}
-        \resumeItem{Implemented real-time notification systems using \textbf{WebSockets} and automated deployments using \textbf{Docker and Kubernetes}.}
+        \resumeItem{Improved user onboarding conversion through A/B-tested \textbf{React.js and Next.js} signup and activation flows.}
+        \resumeItem{Built analytics pipelines processing high-volume user event streams, supporting retention and engagement analysis.}
+        \resumeItem{Implemented real-time notifications using \textbf{WebSockets} and automated deployments with \textbf{Docker and Kubernetes}.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -175,10 +173,9 @@
   {May 2026 -- Present}
   {React.js, Next.js, Node.js, Express.js, Python, PostgreSQL, Redis, OAuth $|$ \href{https://workbridgee.vercel.app/}{workbridgee.vercel.app}}
   \resumeItemListStart
-    \resumeItem{Building an AI-powered collaboration platform aimed at connecting students with real-world industry projects through skill-based matching.}
-    \resumeItem{Developed frontend modules using \textbf{React.js and Next.js} for project discovery, user workflows, and collaboration interfaces.}
-    \resumeItem{Implemented backend services using \textbf{Node.js, Express.js, and PostgreSQL} for authentication, project management, and workflow handling.}
-    \resumeItem{Designing AI-based recommendation workflows to improve matching between student skills and project requirements.}
+    \resumeItem{Built and deployed an AI-powered collaboration platform that connects students with real-world industry projects through skill-based matching.}
+    \resumeItem{Developed the full stack --- \textbf{React.js/Next.js} interfaces for project discovery and collaboration, with \textbf{Node.js, Express.js, and PostgreSQL} services for auth, project management, and workflows.}
+    \resumeItem{Currently extending the platform with AI-based recommendation workflows to match student skills to project requirements. Additional projects, including RAG and agentic AI demos, on \href{https://github.com/maheshchichkoti}{\underline{GitHub}}.}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -187,10 +184,10 @@
 \section{Certifications}
 \begin{itemize}[leftmargin=0.15in, label={}, itemsep=-0.05in]
 \item Oracle AI Vector Search Certified Professional, by \underline{\textcolor{blue}{\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=BBBFD68A8A08024E5624BE28AA84D101812885D8B9C036DA18F8F110A75CBB12}{Oracle}}} -- Sep 2025
-\item Oracle Cloud Infrastructure 2024 Generative AI Certified Professional, by
-    \underline{\textcolor{blue}{\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=2FD55AA64EF5240AFF31F10E95EB6D46DCAC92326D8E2ABB457EE7AC8C3CAF65}{Oracle}}} -- Aug 2024
 \item Machine Learning I, by
      \underline{\textcolor{blue}{\href{https://badges.plus.columbia.edu/5fdeba5e-ee65-4041-86d9-602fb4d1f288\#acc.Xf1YuPmA}{Columbia University}}} -- Aug 2025
+\item Oracle Cloud Infrastructure 2024 Generative AI Certified Professional, by
+    \underline{\textcolor{blue}{\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=2FD55AA64EF5240AFF31F10E95EB6D46DCAC92326D8E2ABB457EE7AC8C3CAF65}{Oracle}}} -- Aug 2024
 \item Java Full Stack Development Certificate, by Jspiders Bangalore -- Aug 2023
 \end{itemize}
 
@@ -199,7 +196,7 @@
 \resumeSubHeadingListStart
     \resumeSubheading
       {Adichunchanagiri Institute of Technology}{Chikkamagaluru, KA}
-      {Bachelor of Engineering, VTU University}{Aug 2023}
+      {Bachelor of Engineering, Visvesvaraya Technological University (VTU)}{Aug 2023}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
