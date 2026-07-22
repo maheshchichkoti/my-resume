@@ -2,7 +2,7 @@ name: Build LaTeX PDF
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
           root_file: resume.tex
 
       - name: Rename PDF
-        run: mv resume.pdf CV_Mahesh_Chitakoti_2025.pdf
+        run: mv resume.pdf CV_Mahesh_Chitakoti_2026.pdf
 
       - name: Upload PDF to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
